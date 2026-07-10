@@ -1,18 +1,18 @@
-# Noble Swap Contracts
+# NobleSwap Contracts
 
-<p align="left">
-  <a href="https://nobleswap.app">
-      <img src="https://user-images.githubusercontent.com/85043551/213883186-882ccc6c-7b0a-4ce8-b5e3-a8d7258aeee5.png" height="175">
-  </a>
-</p>
+Collection of Solidity contracts that support the NobleSwap ecosystem, including exchange, liquidity, and supporting protocol components. The repository is organized as independent Hardhat projects beneath `contracts/`.
 
+## Layout
 
-This repo contains all the contracts used in Noble Swap. It is divided in independent projects where each of them contains its smart contracts, test environment and unique config files.
+- `contracts/core/` — core exchange protocol contracts
+- `contracts/periphery/` — routers and peripheral contracts
+- `test/` — contract-level tests
 
-## Existing projects
+## Development
 
-| Project name                                                          | Description                                                                                                                | Solidity version(s)      |
-| --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| [Core Protocol](./contracts/core)                     | Based on Uniswap V2, contains the Factory Contract that creates the individual Pair Contracts for the Swap                                      | 0.5.16           |
-| [Periphery](./contracts/periphery)                             | Based on Uniswap V2, contains the Router Contract that allows the other Apps and Users to interact with the Factory and Swap between the Pairs                                     | 0.6.6                   |
-| [Staking Pools](./contracts/farms)                                 | Based on Uniswap V2, ncludes stand-alone pools and pool deployer                                                                                         | 0.8.17                   |                |
+Install dependencies with `npm install`, then use Hardhat from the relevant project configuration to compile and run tests. Review each project's Solidity version and configuration before making changes.
+
+## Security
+
+These contracts are financial infrastructure. Changes require thorough testing, review of inherited upstream behavior, and an appropriate security assessment before production use.
+
